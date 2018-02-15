@@ -15,6 +15,8 @@ $kalle->addOwner("Charles");
 $kalle->addOwner(0);
 $kalle->addOwner("");
 
+echo $kalle->owners[0];
+
 $pelle = new Horse;
 $pelle->name = "Pelle";
 $pelle->breed = "Belgisk våffla";

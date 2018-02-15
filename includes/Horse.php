@@ -7,7 +7,7 @@ class Horse {
     public $height = "N/A";
     public $weight = "N/A";
     public $sex = "Unknown";
-    public $owners = [];
+    protected $owners = [];
 
     public function addOwner($newOwner) {
         if (is_string($newOwner) && !empty($newOwner)) {
