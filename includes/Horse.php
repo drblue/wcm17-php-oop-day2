@@ -7,14 +7,16 @@ class Horse {
     public $height = "N/A";
     public $weight = "N/A";
     public $sex = "Unknown";
-    public $owner;
+    public $owners = [];
 
     public function addOwner($newOwner) {
-        $this->owner = $newOwner;
+        if (is_string($newOwner) && !empty($newOwner)) {
+            array_push($this->owners, $newOwner);
+        }
     }
 
-    public function getOwner() {
-        return $this->owner;
+    public function getOwners() {
+        return implode(", ", $this->owners);
     }
 
     public function getInfo() {

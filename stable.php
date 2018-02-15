@@ -12,6 +12,8 @@ $kalle->name = "Kalle";
 $kalle->breed = "Arabiskt fullblod";
 $kalle->weight = 1150;
 $kalle->addOwner("Charles");
+$kalle->addOwner(0);
+$kalle->addOwner("");
 
 $pelle = new Horse;
 $pelle->name = "Pelle";
@@ -25,6 +27,6 @@ $hastar = array($bengt, $kalle, $pelle);
 
 foreach ($hastar as $hast) {
     echo $hast->getInfo();
-    echo "Ägare: " . $hast->getOwner() . "<br>";
+    echo "Ägare: " . $hast->getOwners() . "<br>";
     echo "<br>";
 }
