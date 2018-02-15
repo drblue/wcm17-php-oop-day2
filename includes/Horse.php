@@ -9,6 +9,10 @@ class Horse {
     public $sex = "Unknown";
     protected $owners = [];
 
+    public function __construct($name) {
+        $this->name = $name;
+    }
+
     public function addOwner($newOwner) {
         if (is_string($newOwner) && !empty($newOwner)) {
             array_push($this->owners, $newOwner);

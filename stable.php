@@ -2,28 +2,25 @@
 
 require "includes/Horse.php";
 
-$bengt = new Horse;
-$bengt->name = "Bengt";
+$bengt = new Horse("Bengt");
 $bengt->breed = "Ardenner";
 $bengt->addOwner("Eva");
 
-$kalle = new Horse;
-$kalle->name = "Kalle";
+$kalle = new Horse("Kalle");
 $kalle->breed = "Arabiskt fullblod";
 $kalle->weight = 1150;
 $kalle->addOwner("Charles");
 $kalle->addOwner(0);
 $kalle->addOwner("");
 
-echo $kalle->owners[0];
-
-$pelle = new Horse;
-$pelle->name = "Pelle";
+$pelle = new Horse("Pelle");
 $pelle->breed = "Belgisk våffla";
 $pelle->weight = 150;
 
+$stefan = new Horse();
+
 // $hastar = [$bengt, $kalle]; // samma som nedan, bara annat sätt att skriva på
-$hastar = array($bengt, $kalle, $pelle);
+$hastar = array($bengt, $kalle, $pelle, $stefan);
 
 // echo $hastar[1]->getInfo();
 
